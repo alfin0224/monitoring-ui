@@ -59,7 +59,7 @@ const SignIn = () => {
     <>
       <Container>
         <FormWrap>
-            <Icon to="/">sefeo</Icon>
+            <Icon to="/">TATONAS</Icon>
             <FormContent>
                 <Form onSubmit={Auth}>
                  {isError && <p style={{textAlign: 'center', color: 'white'}}>{message}</p> }

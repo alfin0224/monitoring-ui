@@ -69,7 +69,7 @@ const SignUp = () => {
   
   return (
     <div style={{ minHeight: '932px', bottom:0, left:0, top:0, right:0, zIndex: 0, overflow: 'hidden', background: 'linear-gradient(108deg,rgba(199, 166, 122, 1) 0%, rgba(199, 166, 122, 1) 100%'}}>
-        <Link to={'/'} className="text-light pt-5" style={{ marginLeft: '32px', marginTop: '32px', paddingTop: '50px', textDecoration: 'none', fontWeight:'700', fontSize: '32px'}}>sefeo</Link>
+        <Link to={'/'} className="text-light pt-5" style={{ marginLeft: '32px', marginTop: '32px', paddingTop: '50px', textDecoration: 'none', fontWeight:'700', fontSize: '32px'}}>TATONAS</Link>
     <div className="offset-lg-3 col-lg-6 pt-5 pb-5">
         <form className="container" onSubmit={handleSubmit}>
             <div className="card bg-dark text-light">
