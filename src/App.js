@@ -26,7 +26,7 @@ function App() {
           <CssBaseline />
           <Routes>
 
-            <Route path="/signin" element={<SignIn />} />
+            <Route path="/" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
 
             <Route path="/*" element={<AuthenticatedApp />} />
@@ -45,7 +45,7 @@ function AuthenticatedApp() {
       <main className="content">
         <Topbar />
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/report" element={<Dashboard />} />
           <Route path="/sensors" element={<Sensor />} />
           <Route path="/addSensor" element={<AddSensor />} />
           <Route path="/editSensor/:id" element={<EditSensor />} />

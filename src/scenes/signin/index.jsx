@@ -35,7 +35,7 @@ const SignIn = () => {
           const response = await api.get('/profile')
           .then(response => {
             toast.success('Sign In successfully.');
-            navigate("/");
+            navigate("/report");
           })
           .catch(error => {
             console.error('Error fetching user profile:', error);

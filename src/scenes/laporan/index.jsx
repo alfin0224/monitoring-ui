@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import api from "../../api/configApi.js";
 import {
   Box,
-  Button,
   Typography,
   useTheme,
   useMediaQuery,
@@ -12,7 +11,6 @@ import {
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import StatBox from "../../components/StatBox";
-import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import { getMe } from "../features/authSlice";
 import LineChart from "../../components/LineChart";
 import GeographyChart from "../../components/GeographyChart";
@@ -38,7 +36,6 @@ const Dashboard = () => {
   const chartRef = useRef(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.auth);
   const { isError } = useSelector((state) => state.auth);
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
   const [fromDate, setFromDate] = useState("");
@@ -52,6 +49,16 @@ const Dashboard = () => {
   const [sensorData, setSensorData] = useState([]);
   const [hardwareSensors, setHardwareSensors] = useState([]);
   const [hardwares, setHardwares] = useState([]);
+
+  useEffect(() => {
+    dispatch(getMe());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (isError) {
+      navigate("/signin");
+    }
+  }, [isError, navigate]);
 
   useEffect(() => {
     const getHardwareSensors = async () => {

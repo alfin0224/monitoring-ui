@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
-import EdgesensorHighOutlinedIcon from '@mui/icons-material/EdgesensorHighOutlined';
-import HardwareOutlinedIcon from '@mui/icons-material/HardwareOutlined';
-import DisplaySettingsOutlinedIcon from '@mui/icons-material/DisplaySettingsOutlined';
-import { useSelector } from 'react-redux';
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
+import EdgesensorHighOutlinedIcon from "@mui/icons-material/EdgesensorHighOutlined";
+import HardwareOutlinedIcon from "@mui/icons-material/HardwareOutlined";
+import DisplaySettingsOutlinedIcon from "@mui/icons-material/DisplaySettingsOutlined";
+import { useSelector } from "react-redux";
 import { useMediaQuery } from "@mui/material";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -58,12 +58,15 @@ const Sidebar = () => {
         "& .pro-menu-item.active": {
           color: "#b58d53 !important",
         },
-        height: isMobile ? '940px' : 'full-height',
+        height: isMobile ? "940px" : "full-height",
       }}
     >
-      <ProSidebar sx={{
-        height: isMobile ? '940px' : 'full-height',
-        }} collapsed={isMobile || isCollapsed}>
+      <ProSidebar
+        sx={{
+          height: isMobile ? "940px" : "full-height",
+        }}
+        collapsed={isMobile || isCollapsed}
+      >
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
@@ -93,25 +96,29 @@ const Sidebar = () => {
 
           {!isCollapsed && (
             <Box mb="25px">
-              <Box display="flex" justifyContent="center" alignItems="center">
-              </Box>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+              ></Box>
               <Box textAlign="center">
                 <Typography
                   variant="h2"
                   color={colors.grey[100]}
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
-                >
-                </Typography>
+                ></Typography>
               </Box>
             </Box>
           )}
-          
+
           {/* Menu Items */}
-          <Box paddingLeft={isMobile ? undefined : (isCollapsed ? undefined : "10%")}>
+          <Box
+            paddingLeft={isMobile ? undefined : isCollapsed ? undefined : "10%"}
+          >
             <Item
               title="Report"
-              to="/"
+              to="/report"
               icon={<DescriptionOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -131,14 +138,13 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-                        <Item
+            <Item
               title="Hardware Detail"
               to="/hardwareDetail"
               icon={<DisplaySettingsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-
           </Box>
         </Menu>
       </ProSidebar>
@@ -147,4 +153,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
