@@ -110,8 +110,7 @@ const SignUp = () => {
                             <div className="form-group">
                                 <label>Role Account <span className="errmsg">*</span></label>
                                 <select value={roleId} onChange={e => setRoleId(e.target.value)} className="form-control" required>
-                                    <option disabled>Choose Your City</option>
-
+                                    <option value="">Choose Your City</option>
                                     <option value="1">Super Admin</option>
                                     <option value="2">Admin</option>
                                     <option value="3">User</option>

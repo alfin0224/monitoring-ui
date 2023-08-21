@@ -58,12 +58,12 @@ const Sidebar = () => {
         "& .pro-menu-item.active": {
           color: "#b58d53 !important",
         },
-        height: isMobile ? "940px" : "full-height",
+        height: isMobile ? "940px" : "1000px",
       }}
     >
       <ProSidebar
         sx={{
-          height: isMobile ? "940px" : "full-height",
+          height: isMobile ? "940px" : "1000px",
         }}
         collapsed={isMobile || isCollapsed}
       >
