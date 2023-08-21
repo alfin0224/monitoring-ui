@@ -14,7 +14,8 @@ import {
     FormH1,
     FormLabel,
     FormInput,
-    FormButton
+    FormButton,
+    Text
 } from './SigninElements';
 
 
@@ -69,7 +70,7 @@ const SignIn = () => {
                     <FormInput type='password' value={password} onChange={e => setPassword(e.target.value)} required />
                     <FormButton type='submit'>{isLoading ? 'Loading...' : 'Login'}</FormButton>
                     <ToastContainer />
-                    {/* <Text>Forgot Password</Text> */}
+                    <Text>Don't Have Account? <a href='/signup'>Register Here</a></Text>
                 </Form>
             </FormContent>
         </FormWrap>

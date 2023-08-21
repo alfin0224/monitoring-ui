@@ -29,7 +29,7 @@ const Topbar = () => {
       
         dispatch(LogOut());
         dispatch(reset());
-        navigate("/signin");
+        navigate("/");
 
     } catch (error) {
       console.error(error);
