@@ -48,7 +48,7 @@ const SignUp = () => {
                     icon: 'success',  
                     text: 'Now, you can login with your account.',  
                 }); 
-                navigate('/signin');
+                navigate('/');
                 });
                 
             } catch (error) {
@@ -92,19 +92,6 @@ const SignUp = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-6 p-3">
-                            <div className="form-group">
-                                <label>Role Account <span className="errmsg">*</span></label>
-                                <select value={roleId} onChange={e => setRoleId(e.target.value)} className="form-control" required>
-                                    <option disabled>Choose Your City</option>
-
-                                    <option value="1">Super Admin</option>
-                                    <option value="2">Admin</option>
-                                    <option value="3">User</option>
-
-                                </select>
-                            </div>
-                        </div>
 
                         <div className="col-lg-6 p-3">
                             <div className="form-group">
@@ -116,6 +103,20 @@ const SignUp = () => {
                             <div className="form-group">
                                 <label>Confirm Password <span className="errmsg">*</span></label>
                                 <input value={confPassword} onChange={e => setConfPassword(e.target.value)} type="password" className="form-control" required></input>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 p-3">
+                            <div className="form-group">
+                                <label>Role Account <span className="errmsg">*</span></label>
+                                <select value={roleId} onChange={e => setRoleId(e.target.value)} className="form-control" required>
+                                    <option disabled>Choose Your City</option>
+
+                                    <option value="1">Super Admin</option>
+                                    <option value="2">Admin</option>
+                                    <option value="3">User</option>
+
+                                </select>
                             </div>
                         </div>
 

@@ -30,7 +30,7 @@ const Hardware = () => {
 
   useEffect(() => {
     if (isError) {
-      navigate("/signin");
+      navigate("/");
     }
   }, [isError, navigate]);
 

@@ -72,7 +72,7 @@ const handleSubmit = async(e) => {
   return (
     <Box m="20px">
     <div style={{ bottom:0, left:0, top:0, right:0, zIndex: 0, overflow: 'hidden'}}>
-      <Header title="CREATE MEMBER" subtitle="Create a New Sefeo Member" />
+      <Header title="CREATE MEMBER" subtitle="Create a New Hardware Detail" />
 
           <form className="container" onSubmit={handleSubmit}>
               <div className="text-light">

@@ -29,7 +29,7 @@ const Sensor = () => {
 
   useEffect(() => {
     if (isError) {
-      navigate("/signin");
+      navigate("/");
     }
   }, [isError, navigate]);
 
